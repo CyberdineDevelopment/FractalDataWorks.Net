@@ -11,10 +11,6 @@
     },
     "setAllVariables": true
   },
-  "nuGetPackageVersion": {
-    "semVer": 2,
-    "precision": "build"
-  },
   "release": {
     "branchName": "release/v{version}",
     "versionIncrement": "minor",
