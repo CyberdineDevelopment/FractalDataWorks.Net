@@ -41,7 +41,7 @@ jobs:
     runs-on: windows-latest
     needs: validate
     env:
-      BUILD_CONFIGURATION: ${{ github.ref == 'refs/heads/master' && 'Release' || github.ref == 'refs/heads/develop' && 'Debug' || startsWith(github.ref, 'refs/heads/beta/') && 'Debug' || startsWith(github.ref, 'refs/heads/release/') && 'Release' || startsWith(github.ref, 'refs/heads/experimental/') && 'Debug' || 'Debug' }}
+      BUILD_CONFIGURATION: ${{ github.ref == 'refs/heads/master' && 'Release' || github.ref == 'refs/heads/develop' && 'Alpha' || startsWith(github.ref, 'refs/heads/beta/') && 'Beta' || startsWith(github.ref, 'refs/heads/release/') && 'Preview' || startsWith(github.ref, 'refs/heads/experimental/') && 'Experimental' || 'Debug' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -141,7 +141,7 @@ jobs:
       security-events: write
     continue-on-error: ${{ startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/experimental/') || github.ref == 'refs/heads/develop' }}
     env:
-      BUILD_CONFIGURATION: ${{ github.ref == 'refs/heads/master' && 'Release' || github.ref == 'refs/heads/develop' && 'Debug' || startsWith(github.ref, 'refs/heads/beta/') && 'Debug' || startsWith(github.ref, 'refs/heads/release/') && 'Release' || 'Debug' }}
+      BUILD_CONFIGURATION: ${{ github.ref == 'refs/heads/master' && 'Release' || github.ref == 'refs/heads/develop' && 'Alpha' || startsWith(github.ref, 'refs/heads/beta/') && 'Beta' || startsWith(github.ref, 'refs/heads/release/') && 'Preview' || 'Alpha' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
