@@ -19,7 +19,8 @@
     <Copyright>Copyright © $(Company) $([System.DateTime]::Now.Year)</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/CyberdineDevelopment/Enhanced-Enums</RepositoryUrl>
+    <RepositoryUrl>https://github.com/CyberdineDevelopment/FractalDataWorks.Net</RepositoryUrl>
+    <PackageDescription>Core abstractions and utilities for the FractalDataWorks ecosystem. Build: $(NBGV_GitCommitIdShort)</PackageDescription>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageReadmeFile>README.md</PackageReadmeFile>

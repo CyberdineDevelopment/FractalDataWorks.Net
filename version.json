@@ -7,13 +7,13 @@
   ],
   "cloudBuild": {
     "buildNumber": {
-      "enabled": true,
-      "includeCommitId": {
-        "when": "nonPublicReleaseOnly",
-        "where": "buildMetadata"
-      }
+      "enabled": true
     },
     "setAllVariables": true
+  },
+  "nuGetPackageVersion": {
+    "semVer": 2,
+    "precision": "build"
   },
   "release": {
     "branchName": "release/v{version}",
